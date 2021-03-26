@@ -1,0 +1,21 @@
+/*utlity class ise liya use hoti hai taka humain baar baar comman commands likhni na para*/
+
+.flex
+{
+   display: flex; 
+}
+
+.center{
+align-items: center;
+}
+
+.justify-content
+{
+    justify-content: space-between;
+}
+
+.flex-1
+{
+    flex: 1;       /*for giving space in flex*/
+}
+

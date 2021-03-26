@@ -1,0 +1,221 @@
+@import 'utilities.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Libre+Baskerville&family=Poppins:wght@300&display=swap'); 
+
+:root{                       /*Creating variables for colors*/
+    --yellow:#FFCC57;
+    --black: black;
+    --white:#f3f2eb;
+    --grey: #a19d92;
+}
+
+*{                   /* '*(unversal operator)' means to select all the elements */
+padding: 0;          /* these lines are writen to reset the default style of the browser*/
+margin: 0;
+box-sizing: border-box;  /* by using this property we can padding and border without worrying about the size of the box*/
+--webkit-font-smothing: antialiased;  /* this is used for smothing all the fonts*/
+}
+
+header{
+    
+     clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 90%, 0 100% ); /* The clip-path property lets you clip an element for basic shape where as polygon function is used for creating polygon shapes */
+    background-color: var(--black);
+}
+
+#container
+{
+    max-width: 1200px;
+    padding: 0px 15px; 
+    margin:0px auto; 
+}
+
+header nav #right a
+{   
+    transition: all .3s ease;  /*Used for smothing the hover animation*/
+    text-decoration: none;
+    color: var(--yellow);
+    margin-right: 48px ;
+    text-transform: capitalize;
+    background-color:var(--black);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+header nav #right a:hover
+{
+    color: var(--black);
+    font-size: 16px;
+    width: 20%;
+    height: 45px;
+    background-color: var(--yellow);
+   
+}
+
+body{
+    font-family:'Libre Baskerville', monospace;
+}
+header nav 
+{
+padding: 32px 0px;    /* giving space*/
+}
+
+h5
+{
+    text-align: center;
+    color: var(--white);
+    font-size: 16px;
+    font-family:'Poppins', monospace ;
+}
+h1
+{   font-weight: 100;
+    font-family:'Poppins', monospace ;
+    text-align: center;
+    font-size: 40px;
+    color: var(--yellow);
+}
+
+p
+{
+    text-align: justify;
+    color: var(--white);
+    font-family:'Poppins', monospace;
+    line-height: 1.2;
+
+}
+
+.services_button
+{   
+    transition: all .3s ease;
+    text-align: center;
+    font-size: 14px;
+    background-color: transparent;
+    color: var(--yellow);
+    border-color: var(--yellow);
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+    display: block;     /*for new line */
+    margin: auto;       /* ise se horizontally center main ae jai ga element container kai*/
+
+}
+
+.services_button:hover
+{
+   color: var(--black);
+   font-size: 16px;
+   width: 20%;
+   height: 45px;
+   background-color: var(--yellow);
+  
+}
+
+.left
+{
+    margin-top: -112px;     
+}
+
+section 
+{
+  
+    padding: 96px;
+}
+
+section.about h2
+{
+    text-align: center;
+    color: var(--yellow);
+    margin-bottom: 16px;
+    font-size: 30px ;
+    font-family: 'Poppins', monospace;
+    
+}
+
+section.about h3
+{
+    line-height: 2px ;
+    text-align: center;
+    color: var(--back);
+    font-family: 'Poppins', monospace;
+}
+section.about p1
+{
+    text-align: justify;
+    line-height: 1.2;
+    color: var(--black);
+    font-family: 'Poppins', monospace;
+}
+
+section.services{
+background-color: var(--black);
+clip-path: polygon(0 0, 93% 20%, 100% 100%, 0 100%, 0 100% );
+
+}
+
+section.services h4{
+    text-decoration-color : var(--yellow);
+text-decoration: underline;
+color: var(--yellow);
+font-family:'Poppins', monospace;
+text-align: center; 
+font-weight: 100;
+font-size: 20px;
+margin-bottom: 112px;
+}
+
+section.services .boxes{
+
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 32px;
+  
+}
+
+section.services .boxes .card
+{   
+    transition: all .3s ease;
+    position: relative;           /*images is ko apna parent banain gi ise liya isa relative diya hai */
+    background: var(--grey);
+    padding:3rem 2rem;
+    text-align: center;
+    font-family:'Poppins', monospace ;
+}
+
+section.services .boxes .card img{
+    position: absolute;     /*image card ke hissab se chalay gi */
+    top:-2rem;               /* -ve value use ise liya ki hai taka card se uper jai*/
+    left: 50%;
+    transform: translateX(-50%); /* yeh is eliya use kiya hai Q ke jo image thi woh card ke left se
+                                   50% pe ae rahi thi yeh use kerna ke baad woh beech main ae gai*/
+}
+section.services .boxes .card h2
+{
+font-size: 17px;
+margin-bottom:8px;
+}
+
+section.services .boxes .card p{
+line-height: 1.2;
+font-weight: 200;
+color:var(--black);
+}
+
+ section.services .boxes .card:hover
+ {
+     background: var(--white);
+     color: var(--yellow);
+     
+ }
+
+ section.services .boxes .card:hover p
+ {
+    color: var(--grey);
+ }
+
+.about img
+{
+    height: 350;
+    width: 350;
+    border-radius: 100% 0 0 100%;
+}
